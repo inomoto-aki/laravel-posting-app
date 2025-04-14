@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <titl>投稿一覧</titl>
+    @if(session('flash_message'))
+    <p>{{ session('flash_message') }}</p>
+    @endif
   </head>
   <body>
     <header>
