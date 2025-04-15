@@ -13,7 +13,7 @@
         <ul>
           <li>
             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
-            <form id="logout-form" action="{{ route('lodout') }}"method="POST">
+            <form id="logout-form" action="{{ route('logout') }}"method="POST">
               @csrf
             </form>
           </li>
@@ -35,12 +35,12 @@
         @csrf
         <div>
           <label for="title">タイトル</label>
-          <input type="text" id="title" name="title">
+          <input type="text" id="title" name="title" value="{{ old('title') }}">
         </div>
 
         <div>
           <label for="content">本文</label>
-          <textarea id="content" name="content"></textarea>
+          <textarea id="content" name="content">{{ old('content') }}</textarea>
        </div>
        <button type="submit">投稿</button>
      </form>
